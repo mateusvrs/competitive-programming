@@ -1,18 +1,11 @@
-map<ll, ll> factorization(ll n, const vl& primes) {
-  map<ll, ll> fact;
-
-  for (ll d : primes) {
-    if (d * d > n) break;
-
-    ll k = 0;
-    while (n % d == 0) {
-      k++;
-      n /= d;
-    }
-
-    if (k) fact[d] = k;
+map<ll, ll> factorization(ll n) {
+  map<ll, ll> ans;
+  for (ll i = 2; i * i <= n; i++) {
+    ll count = 0;
+    for (; n % i == 0; count++, n /= i)
+      ;
+    if (count) ans[i] = count;
   }
-
-  if (n > 1) fact[n] = 1;
-  return fact;
+  if (n > 1) ans[n]++;
+  return ans;
 }
