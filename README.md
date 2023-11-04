@@ -13,7 +13,10 @@ In this repository, you'll find algorithms and data structure implementations fo
     - [dijkstra](/algorithms/graphs/dijkstra.cpp)
 
 - Math
+    - [convex hull](/algorithms/math/convex-hull.cpp)
     - [factorization](/algorithms/math/factorization.cpp)
+    - [factorization with sieve](/algorithms/math/factorization-with-sieve.cpp)
+    - [phi](/algorithms/math/phi.cpp)
     - [point to segment](/algorithms/math/point-to-segment.cpp)
     - [sieve](/algorithms/math/sieve.cpp)
 
