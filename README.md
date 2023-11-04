@@ -11,6 +11,7 @@ In this repository, you'll find algorithms and data structure implementations fo
 
 - Graphs
     - [dijkstra](/algorithms/graphs/dijkstra.cpp)
+    - [tree isomorph](/algorithms/graphs/tree_isomorph.cpp)
 
 - Math
     - [convex hull](/algorithms/math/convex-hull.cpp)
