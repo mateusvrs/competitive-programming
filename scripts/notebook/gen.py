@@ -53,9 +53,14 @@ parser.add_argument(
 parser.add_argument(
     "--confpath", type=str, default="settings/", help="Path to settings and macros"
 )
+
+parser.add_argument(
+    "--teamname", type=str, default="", help="Name of the team the notebook belongs to"
+)
 args = parser.parse_args()
 ALGO_PATH = Path(args.path)
 confpath = Path(args.confpath)
+team_name = args.teamname
 
 
 ALGO_SECT_IGNORE = ["extras"]
@@ -65,12 +70,23 @@ END_MULTICOLS = "\n\\end{multicols}\n"
 END_DOCUMENT = "\n\\end{document}\n"
 
 
+def change_team_name(path: str, team_name: str):
+    with open(path, 'r') as file:
+        file_contents = file.read()
+
+    modified_contents = file_contents.replace("teamname", team_name)
+
+    with open(path, 'w') as file:
+        file.write(modified_contents)
+
+
 def cpy_template():
     # gets the path from the file gen.py
     path = Path(__file__).parent.absolute()
     template = path / "template.tex"
     notebook = path / "notebook.tex"
     shutil.copyfile(template, notebook)
+    change_team_name(notebook, team_name)
 
 
 def remove_aux():
@@ -80,6 +96,7 @@ def remove_aux():
         "notebook.log",
         "notebook.toc",
         "notebook.tex",
+        "notebook.out",
         "texput.log",
     ]
     for item in to_remove:
