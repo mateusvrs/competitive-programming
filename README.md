@@ -15,9 +15,15 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [dijkstra](/algorithms/graphs/dijkstra.cpp)
 
 - Math
+  - [binomial](/algorithms/math/binomial.cpp)
   - [convex hull](/algorithms/math/convex-hull.cpp)
   - [factorization](/algorithms/math/factorization.cpp)
   - [factorization with sieve](/algorithms/math/factorization-with-sieve.cpp)
+  - [fast exp](/algorithms/math/fast-exp.cpp)
+  - [fast exp iterative](/algorithms/math/fast-exp-iterative.cpp)
+  - [gcd](/algorithms/math/gcd.cpp)
+  - [is prime](/algorithms/math/is-prime.cpp)
+  - [lcm](/algorithms/math/lcm.cpp)
   - [phi](/algorithms/math/phi.cpp)
   - [point to segment](/algorithms/math/point-to-segment.cpp)
   - [sieve](/algorithms/math/sieve.cpp)
