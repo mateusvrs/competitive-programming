@@ -11,12 +11,19 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [kadane](/algorithms/dynamic-programming/kadane.cpp)
   - [lis](/algorithms/dynamic-programming/lis.cpp)
 
+- Geometry
+  - [convex hull](/algorithms/geometry/convex-hull.cpp)
+  - [point to segment](/algorithms/geometry/point-to-segment.cpp)
+
 - Graphs
   - [dijkstra](/algorithms/graphs/dijkstra.cpp)
+  - [dijkstra path](/algorithms/graphs/dijkstra-path.cpp)
+  - [graph](/algorithms/graphs/graph.cpp)
+  - [retrieve path](/algorithms/graphs/retrieve-path.cpp)
 
 - Math
   - [binomial](/algorithms/math/binomial.cpp)
-  - [convex hull](/algorithms/math/convex-hull.cpp)
+  - [count divisors](/algorithms/math/count-divisors.cpp)
   - [factorization](/algorithms/math/factorization.cpp)
   - [factorization with sieve](/algorithms/math/factorization-with-sieve.cpp)
   - [fast exp](/algorithms/math/fast-exp.cpp)
@@ -25,8 +32,8 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [is prime](/algorithms/math/is-prime.cpp)
   - [lcm](/algorithms/math/lcm.cpp)
   - [phi](/algorithms/math/phi.cpp)
-  - [point to segment](/algorithms/math/point-to-segment.cpp)
   - [sieve](/algorithms/math/sieve.cpp)
+  - [sum divisors](/algorithms/math/sum-divisors.cpp)
 
 - Problems
   - [kth digit string](/algorithms/problems/kth-digit-string.cpp)
