@@ -1,32 +1,23 @@
-vector<pll> adj[MAX];
-class Graph {
- public:
-  void add(ll u, ll v, ll w) {
-    adj[u].emplace_back(v, w);
-    // Undirected Graph
-    // adj[u].emplace_back(v, w);
-  }
+vl Graph::dijkstra(ll src) {
+  vl ds(this->N, LLONG_MAX);
+  ds[src] = 0;
 
-  vl dijkstra(ll src, ll n) {
-    vl ds(n, LLONG_MAX);
-    ds[src] = 0;
-    set<pll> pq;
-    pq.emplace(0, src);
+  set<pll> st;
+  st.emplace(0, src);
 
-    while (!pq.empty()) {
-      ll u = pq.begin()->second;
-      ll wu = pq.begin()->first;
-      pq.erase(pq.begin());
+  while (!st.empty()) {
+    ll u = st.begin()->snd;
+    ll wu = st.begin()->fst;
+    st.erase(st.begin());
 
-      if (wu != ds[u]) continue;
-      for (auto [v, w] : adj[u]) {
-        if (ds[v] > ds[u] + w) {
-          ds[v] = ds[u] + w;
-          pq.emplace(ds[v], v);
-        }
+    if (wu != ds[u]) continue;
+    for (auto& [v, w] : adj[u]) {
+      if (ds[v] > ds[u] + w) {
+        ds[v] = ds[u] + w;
+        st.emplace(ds[v], v);
       }
     }
-
-    return ds;
   }
-};
+
+  return ds;
+}
