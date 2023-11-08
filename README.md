@@ -45,6 +45,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [phi](/algorithms/math/phi.cpp)
   - [sieve](/algorithms/math/sieve.cpp)
   - [sum divisors](/algorithms/math/sum-divisors.cpp)
+  - [sum of diference](/algorithms/math/sum-of-diference.cpp)
 
 - Problems
   - [kth digit string](/algorithms/problems/kth-digit-string.cpp)
