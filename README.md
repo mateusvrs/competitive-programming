@@ -29,6 +29,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [floyd warshall path](/algorithms/graphs/floyd-warshall-path.cpp)
   - [graph](/algorithms/graphs/graph.cpp)
   - [retrieve path](/algorithms/graphs/retrieve-path.cpp)
+  - [retrieve path 2d](/algorithms/graphs/retrieve-path-2d.cpp)
 
 - Math
   - [binomial](/algorithms/math/binomial.cpp)
@@ -38,6 +39,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [fast exp](/algorithms/math/fast-exp.cpp)
   - [fast exp iterative](/algorithms/math/fast-exp-iterative.cpp)
   - [gcd](/algorithms/math/gcd.cpp)
+  - [integer mod](/algorithms/math/integer-mod.cpp)
   - [is prime](/algorithms/math/is-prime.cpp)
   - [lcm](/algorithms/math/lcm.cpp)
   - [phi](/algorithms/math/phi.cpp)
