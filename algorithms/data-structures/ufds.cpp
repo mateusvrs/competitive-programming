@@ -1,5 +1,5 @@
 class UFDS {
-public:
+ public:
   vi ps, size;
   // vector<unordered_set<int>> sts;
 
