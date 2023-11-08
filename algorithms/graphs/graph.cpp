@@ -15,10 +15,4 @@ class Graph {
     adj[u].emplace_back(v, w);
     if (undirected) adj[v].emplace_back(u, w);
   }
-
-  vl dijkstra(ll src);
-
-  pair<vl, vl> dijkstra_path(ll src);
-
-  vll retrieve_path(ll s, ll u, const vl& pred);
 };
