@@ -1,9 +1,12 @@
 class UFDS {
- private:
-  vector<int> size, ps;
+public:
+  vi ps, size;
+  // vector<unordered_set<int>> sts;
 
- public:
-  UFDS(int N) : size(N + 1, 1), ps(N + 1) { iota(ps.begin(), ps.end(), 0); }
+  UFDS(int N) : size(N + 1, 1), ps(N + 1), sts(N) {
+    iota(ps.begin(), ps.end(), 0);
+    // for (int i = 0; i < N; i++) sts[i].insert(i);
+  }
 
   int find_set(int x) { return x == ps[x] ? x : (ps[x] = find_set(ps[x])); }
 
@@ -12,12 +15,13 @@ class UFDS {
   void union_set(int x, int y) {
     if (same_set(x, y)) return;
 
-    int p = find_set(x);
-    int q = find_set(y);
+    int px = find_set(x);
+    int py = find_set(y);
 
-    if (size[p] < size[q]) swap(p, q);
+    if (size[px] < size[py]) swap(px, py);
 
-    ps[q] = p;
-    size[p] += size[q];
+    ps[py] = px;
+    size[px] += size[py];
+    // sts[px].merge(sts[py]);
   }
 };
