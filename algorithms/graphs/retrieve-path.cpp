@@ -1,11 +1,10 @@
 vll Graph::retrieve_path(ll src, ll trg, const vl& pred) {
   vll p;
-  ll v = trg;
-
+  
   do {
-    p.emplace_back(pred[v], v);
-    v = pred[v];
-  } while (v != src);
+    p.emplace_back(pred[trg], trg);
+    trg = pred[trg];
+  } while (trg != src);
 
   reverse(all(p));
 
