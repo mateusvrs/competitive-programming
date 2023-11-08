@@ -29,16 +29,3 @@ pair<vector<vi>, vector<vi>> floyd_warshall(int N) {
 
   return {dist, pred};
 }
-
-vii path(int u, int v, const vector<vi>& pred) {
-  vii p;
-
-  do {
-    p.push_back(ii(pred[u][v], v));
-    v = pred[u][v];
-  } while (v != u);
-
-  reverse(all(p));
-
-  return p;
-}
