@@ -1,5 +1,5 @@
 int dist[MAX][MAX];
-vector<ii> adj[MAX];
+vii adj[MAX];
 
 bool has_negative_cycle(int N) {
   for (int u = 1; u <= N; ++u)
