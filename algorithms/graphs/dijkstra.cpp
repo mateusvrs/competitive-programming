@@ -1,5 +1,6 @@
-vl Graph::dijkstra(ll src) {
-  vl ds(this->N, LLONG_MAX);
+pair<vl, vl> Graph::dijkstra(ll src) {
+  vl pd(this->N, LLONG_MAX), ds(this->N, LLONG_MAX);
+  pd[src] = src;
   ds[src] = 0;
 
   set<pll> st;
@@ -14,10 +15,11 @@ vl Graph::dijkstra(ll src) {
     for (auto& [v, w] : adj[u]) {
       if (ds[v] > ds[u] + w) {
         ds[v] = ds[u] + w;
+        pd[v] = u;
         st.emplace(ds[v], v);
       }
     }
   }
 
-  return ds;
+  return {ds, pd};
 }
