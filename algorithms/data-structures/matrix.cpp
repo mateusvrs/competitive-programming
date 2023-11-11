@@ -1,4 +1,5 @@
-template <typename T> struct Matrix {
+template <typename T>
+struct Matrix {
   vector<vector<T>> d;
 
   Matrix() : Matrix(0) {}
@@ -15,7 +16,7 @@ template <typename T> struct Matrix {
     Matrix<T> res(m(), n());
     for (int i = 0; i < m(); i++) {
       for (int j = 0; j < n(); j++) {
-        res[i][j] = d[n()-j-1][i];
+        res[i][j] = d[n() - j - 1][i];
       }
     }
     return res;
@@ -34,15 +35,15 @@ template <typename T> struct Matrix {
     return res;
   }
 
-  Matrix<T> submatrix(int start_i, int start_j, int rows = INT_MAX, int cols = INT_MAX) const {
+  Matrix<T> submatrix(int start_i, int start_j, int rows = INT_MAX,
+                      int cols = INT_MAX) const {
     rows = min(rows, n() - start_i);
     cols = min(cols, m() - start_j);
     if (rows <= 0 or cols <= 0) return {};
 
     Matrix<T> res(rows, cols);
     for (int i = 0; i < rows; i++)
-      for (int j = 0; j < cols; j++)
-        res[i][j] = d[i+start_i][j+start_j];
+      for (int j = 0; j < cols; j++) res[i][j] = d[i + start_i][j + start_j];
     return res;
   }
 
@@ -50,8 +51,8 @@ template <typename T> struct Matrix {
     Matrix<T> res(n(), m());
     for (int i = 0; i < n(); i++) {
       for (int j = 0; j < m(); j++) {
-        if (i+x < 0 or i+x >= n() or j+y < 0 or j+y >= m()) continue;
-        res[i+x][j+y] = d[i][j];
+        if (i + x < 0 or i + x >= n() or j + y < 0 or j + y >= m()) continue;
+        res[i + x][j + y] = d[i][j];
       }
     }
     return res;
@@ -59,8 +60,7 @@ template <typename T> struct Matrix {
 
   static Matrix<T> identity(int n) {
     Matrix<T> res(n);
-    for (int i = 0; i < n; i++)
-      res[i][i] = 1;
+    for (int i = 0; i < n; i++) res[i][i] = 1;
     return res;
   }
 
@@ -68,61 +68,53 @@ template <typename T> struct Matrix {
   const vector<T> &operator[](int i) const { return d[i]; }
   Matrix<T> &operator+=(T value) {
     for (auto &row : d) {
-      for (auto &x : row)
-        x += value;
+      for (auto &x : row) x += value;
     }
     return *this;
   }
   Matrix<T> operator+(T value) const {
     auto res = *this;
     for (auto &row : res) {
-      for (auto &x : row)
-        x = x + value;
+      for (auto &x : row) x = x + value;
     }
     return res;
   }
   Matrix<T> &operator-=(T value) {
     for (auto &row : d) {
-      for (auto &x : row)
-        x -= value;
+      for (auto &x : row) x -= value;
     }
     return *this;
   }
   Matrix<T> operator-(T value) const {
     auto res = *this;
     for (auto &row : res) {
-      for (auto &x : row)
-        x = x - value;
+      for (auto &x : row) x = x - value;
     }
     return res;
   }
   Matrix<T> &operator*=(T value) {
     for (auto &row : d) {
-      for (auto &x : row)
-        x *= value;
+      for (auto &x : row) x *= value;
     }
     return *this;
   }
   Matrix<T> operator*(T value) const {
     auto res = *this;
     for (auto &row : res) {
-      for (auto &x : row)
-        x = x * value;
+      for (auto &x : row) x = x * value;
     }
     return res;
   }
   Matrix<T> &operator/=(T value) {
     for (auto &row : d) {
-      for (auto &x : row)
-        x /= value;
+      for (auto &x : row) x /= value;
     }
     return *this;
   }
   Matrix<T> operator/(T value) const {
     auto res = *this;
     for (auto &row : res) {
-      for (auto &x : row)
-        x = x / value;
+      for (auto &x : row) x = x / value;
     }
     return res;
   }
@@ -184,8 +176,7 @@ template <typename T> struct Matrix {
 
   friend istream &operator>>(istream &is, Matrix<T> &mat) {
     for (auto &row : mat)
-      for (auto &x : row)
-        is >> x;
+      for (auto &x : row) is >> x;
     return is;
   }
   friend ostream &operator<<(ostream &os, const Matrix<T> &mat) {
@@ -194,8 +185,7 @@ template <typename T> struct Matrix {
       if (not frow) os << '\n';
       bool first = 1;
       for (auto &x : row) {
-        if (not first)
-          os << ' ';
+        if (not first) os << ' ';
         os << x;
         first = 0;
       }
