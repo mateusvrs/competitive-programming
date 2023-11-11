@@ -5,6 +5,7 @@ In this repository, you'll find algorithms and data structure implementations fo
 ## Algorithms
 
 - Data Structures
+  - [matrix](/algorithms/data-structures/matrix.cpp)
   - [ufds](/algorithms/data-structures/ufds.cpp)
 
 - Dynamic Programming
