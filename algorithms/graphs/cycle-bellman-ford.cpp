@@ -1,8 +1,6 @@
 using edge = tuple<int, int, int>;
 
 bool has_negative_cycle(int s, int N, const vector<edge>& edges) {
-  const int oo{1000000010};
-
   vi dist(N + 1, oo);
   dist[s] = 0;
 

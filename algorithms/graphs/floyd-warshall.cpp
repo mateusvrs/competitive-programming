@@ -1,19 +1,31 @@
-int dist[MAX][MAX];
-vector<ii> adj[MAX];
+vii adj[MAX];
 
-vector<vi> floyd_warshall(int N) {
+pair<vector<vi>, vector<vi>> floyd_warshall(int N) {
   vector<vi> dist(N + 1, vi(N + 1, oo));
+  vector<vi> pred(N + 1, vi(N + 1, oo));
 
-  for (int u = 1; u <= N; ++u) dist[u][u] = 0;
+  for (int u = 1; u <= N; ++u) {
+    dist[u][u] = 0;
+    pred[u][u] = u;
+  }
 
   for (int u = 1; u <= N; ++u)
-    for (auto [v, w] : adj[u]) dist[u][v] = w;
+    for (auto [v, w] : adj[u]) {
+      dist[u][v] = w;
+      pred[u][v] = u;
+    }
 
-  for (int k = 1; k <= N; ++k)
-    for (int u = 1; u <= N; ++u)
-      for (int v = 1; v <= N; ++v)
-        if (dist[u][k] < oo and dist[k][v] < oo)
-          dist[u][v] = min(dist[u][v], dist[u][k] + dist[k][v]);
+  for (int k = 1; k <= N; ++k) {
+    for (int u = 1; u <= N; ++u) {
+      for (int v = 1; v <= N; ++v) {
+        if (dist[u][k] < oo and dist[k][v] < oo and
+            dist[u][v] > dist[u][k] + dist[k][v]) {
+          dist[u][v] = dist[u][k] + dist[k][v];
+          pred[u][v] = pred[k][v];
+        }
+      }
+    }
+  }
 
-  return dist;
+  return {dist, pred};
 }

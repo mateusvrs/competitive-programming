@@ -1,20 +1,13 @@
-#define len(__x) (int)__x.size()
-
-using ll = long long;
-using pll = pair<ll, ll>;
-using vi = vector<int>;
-using vi2d = vector<vi>;
+typedef vector<vl> vl2d;
 #define all(a) a.begin(), a.end()
-#define pb(___x) push_back(___x)
-#define mp(___a, ___b) make_pair(___a, ___b)
-#define eb(___x) emplace_back(___x)
+#define len(x) (int)x.size()
 
 template <typename T>
 struct SparseTable {
   vector<T> v;
   ll n;
   static const ll b = 30;
-  vi mask, t;
+  vl mask, t;
 
   ll op(ll x, ll y) { return v[x] < v[y] ? x : y; }
   ll msb(ll x) { return __builtin_clz(1) - __builtin_clz(x); }
@@ -47,19 +40,19 @@ struct SparseTable {
 struct LCA {
   SparseTable<ll> st;
   ll n;
-  vi v, pos, dep;
+  vl v, pos, dep;
 
-  LCA(const vi2d& g, ll root) : n(len(g)), pos(n) {
+  LCA(const vl2d& g, ll root) : n(len(g)), pos(n) {
     dfs(root, 0, -1, g);
     st = SparseTable<ll>(vector<ll>(all(dep)));
   }
 
-  void dfs(ll i, ll d, ll p, const vi2d& g) {
-    v.eb(len(dep)) = i, pos[i] = len(dep), dep.eb(d);
+  void dfs(ll i, ll d, ll p, const vl2d& g) {
+    v.emplace_back(len(dep)) = i, pos[i] = len(dep), dep.emplace_back(d);
     for (auto j : g[i])
       if (j != p) {
         dfs(j, d + 1, i, g);
-        v.eb(len(dep)) = i, dep.eb(d);
+        v.emplace_back(len(dep)) = i, dep.emplace_back(d);
       }
   }
 
