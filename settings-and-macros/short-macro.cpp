@@ -2,6 +2,12 @@
 
 using namespace std;
 
+#ifdef DEBUG
+#include "./settings-and-macros/debug.cpp"
+#else
+#define dbg(...)
+#endif
+
 typedef long long ll;
 typedef pair<int, int> ii;
 
