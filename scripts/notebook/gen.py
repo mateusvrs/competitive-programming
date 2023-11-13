@@ -37,7 +37,8 @@ def get_dir():
     section.sort()
     conf_files: List[Tuple[str, str]] = []
     for conf in os.listdir(confpath):
-        conf_files.append((conf, (confpath / conf).absolute().__str__()))
+        if validCode(conf, [".py", ".cpp"]):
+            conf_files.append((conf, (confpath / conf).absolute().__str__()))
 
     section.append(("Settings and Macros", conf_files))
 
@@ -63,6 +64,7 @@ confpath = Path(args.confpath)
 team_name = args.teamname
 
 
+ALGO_FILE_IGNORE = ["debug.cpp"]
 ALGO_SECT_IGNORE = ["extras"]
 CMD_GEN_PDF = "pdflatex -interaction=nonstopmode -halt-on-error "
 END_FLUSHLEFT = "\n\\end{flushleft}"
@@ -115,7 +117,7 @@ def valid_algo_section(section_name: str) -> bool:
 
 def validCode(file_name: str, valid_codes: list[str]):
     for extension in valid_codes:
-        if file_name.endswith(extension):
+        if file_name.endswith(extension) and not file_name in ALGO_FILE_IGNORE:
             return True
 
     return False
