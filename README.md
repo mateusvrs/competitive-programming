@@ -26,8 +26,13 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [dijkstra](/algorithms/graphs/dijkstra.cpp)
   - [floyd warshall](/algorithms/graphs/floyd-warshall.cpp)
   - [graph](/algorithms/graphs/graph.cpp)
+  - [kruskal](/algorithms/graphs/kruskal.cpp)
+  - [msf](/algorithms/graphs/msf.cpp)
+  - [msg](/algorithms/graphs/msg.cpp)
+  - [prim](/algorithms/graphs/prim.cpp)
   - [retrieve path](/algorithms/graphs/retrieve-path.cpp)
   - [retrieve path 2d](/algorithms/graphs/retrieve-path-2d.cpp)
+  - [second best mst](/algorithms/graphs/second-best-mst.cpp)
 
 - Math
   - [binomial](/algorithms/math/binomial.cpp)
