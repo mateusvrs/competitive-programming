@@ -1,7 +1,8 @@
-long long fast_exp(long long a, int n) {
+ll fast_exp(ll a, ll n, ll mod = LLONG_MAX) {
+  if (n == 0) return 1;
   if (n == 1) return a;
 
-  auto x = fast_exp(a, n / 2);
+  ll x = fast_exp(a, n / 2, mod) % mod;
 
-  return x * x * (n % 2 ? a : 1);
+  return ((x * x) % mod * (n & 1 ? a : 1ll)) % mod;
 }

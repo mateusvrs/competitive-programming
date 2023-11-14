@@ -1,10 +1,11 @@
-long long fast_exp_it(long long a, int n) {
-  long long res = 1, base = a;
+ll fast_exp_it(ll a, ll n, ll mod = LLONG_MAX) {
+  a %= mod;
+  ll res = 1;
 
   while (n) {
-    if (n & 1) res *= base;
+    if (n & 1) (res *= a) %= mod;
 
-    base *= base;
+    (a *= a) %= mod;
     n >>= 1;
   }
 
