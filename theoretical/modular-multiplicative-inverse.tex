@@ -1,0 +1,22 @@
+\subsection{Modular Multiplicative Inverse}
+
+A modular multiplicative inverse of an integer $a$ is an integer $x$ such that
+$a \cdot x$ is congruent to $1$ modular some modulus $m$. To write it in a
+formal way:
+
+\[a \cdot x \equiv 1 \mod m.\]
+
+Euler's theorem, which states that the following congruence is true if $a$ and
+$m$ are co-primes:
+
+\[a^{\phi (m)} \equiv 1 \mod m\]
+
+Multiply both sides of the above equations by $a^{-1}$, and we get:
+
+\begin{itemize}
+    \item For an arbitrary (but coprime) modulus $m$: $a^{\phi(m)-1} \equiv a^{-1}\mod m$
+    \item For a prime modulus $m$: $a^{m - 2} \equiv a^{-1} \mod m$
+\end{itemize}
+
+From these results, we can easily find the modular inverse using the binary
+exponentiation algorithm, which works in $O(\log m)$ time.
