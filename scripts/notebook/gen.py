@@ -42,6 +42,14 @@ def get_dir():
 
     section.append(("Settings and Macros", conf_files))
 
+    # Adds theoretical part to notebook
+    theo_files: List[Tuple[str, str]] = []
+    for theo in os.listdir(theopath):
+        if validCode(theo, [".tex"]):
+            theo_files.append((theo, (theopath / theo).absolute().__str__()))
+
+    section.append(("Theoretical Guide", theo_files))
+
     return section
 
 
@@ -56,11 +64,16 @@ parser.add_argument(
 )
 
 parser.add_argument(
+    "--theopath", type=str, default="theoretical/", help="Path to settings and macros"
+)
+
+parser.add_argument(
     "--teamname", type=str, default="", help="Name of the team the notebook belongs to"
 )
 args = parser.parse_args()
 ALGO_PATH = Path(args.path)
 confpath = Path(args.confpath)
+theopath = Path(args.theopath)
 team_name = args.teamname
 
 
@@ -136,8 +149,7 @@ def create_notebook(section):
             aux += getAlgoSectionTex(item)
             for file, fpath in subsection:
                 file_name = file
-                if item != "Settings and Macros":
-                    # file_name = getName(file)
+                if not item in ["Settings and Macros", "Theoretical Guide"]:
                     suffix = ""
                     if file.endswith(".py"):
                         suffix = " (Python)"
@@ -179,20 +191,15 @@ def create_notebook(section):
                 if description != "":
                     file_name = ""
 
-                curinclude = "\\includes{%s}{%s}{%s}\n" % (
-                    file_name,
-                    fpath,
-                    description,
-                )
                 if description == "":
                     description = "\\subsection{%s}\n" % file_name
 
                 code_include = "\\lstinputlisting{%s}\n" % fpath
 
                 aux += description
-                aux += code_include
 
-                # aux += curinclude
+                if item != "Theoretical Guide":
+                    aux += code_include
 
         aux += END_FLUSHLEFT
         aux += END_MULTICOLS

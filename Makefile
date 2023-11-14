@@ -9,7 +9,8 @@ notebook: format
 	python3 scripts/notebook/gen.py \
 		--path ${CURDIR}/algorithms \
 		--confpath ${CURDIR}/settings-and-macros \
-		--teamname "${team_name}"
+		--teamname "${team_name}" \
+		--theopath ${CURDIR}/theoretical
 
 notepdf:
 	pdflatex -interaction=nonstopmode -halt-on-error ${CURDIR}/scripts/notebook/notebook.tex 
