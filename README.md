@@ -56,6 +56,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [kth digit string](/algorithms/problems/kth-digit-string.cpp)
 
 - Strings
+  - [edit distance](/algorithms/strings/edit-distance.cpp)
   - [manacher](/algorithms/strings/manacher.cpp)
 
 - Trees
