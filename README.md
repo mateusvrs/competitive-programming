@@ -28,6 +28,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [graph](/algorithms/graphs/graph.cpp)
   - [kahn](/algorithms/graphs/kahn.cpp)
   - [kruskal](/algorithms/graphs/kruskal.cpp)
+  - [minimax](/algorithms/graphs/minimax.cpp)
   - [msf](/algorithms/graphs/msf.cpp)
   - [msg](/algorithms/graphs/msg.cpp)
   - [prim](/algorithms/graphs/prim.cpp)
