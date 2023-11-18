@@ -26,13 +26,16 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [dijkstra](/algorithms/graphs/dijkstra.cpp)
   - [floyd warshall](/algorithms/graphs/floyd-warshall.cpp)
   - [graph](/algorithms/graphs/graph.cpp)
+  - [kahn](/algorithms/graphs/kahn.cpp)
   - [kruskal](/algorithms/graphs/kruskal.cpp)
+  - [minimax](/algorithms/graphs/minimax.cpp)
   - [msf](/algorithms/graphs/msf.cpp)
   - [msg](/algorithms/graphs/msg.cpp)
   - [prim](/algorithms/graphs/prim.cpp)
   - [retrieve path](/algorithms/graphs/retrieve-path.cpp)
   - [retrieve path 2d](/algorithms/graphs/retrieve-path-2d.cpp)
   - [second best mst](/algorithms/graphs/second-best-mst.cpp)
+  - [tarjan](/algorithms/graphs/tarjan.cpp)
 
 - Math
   - [binomial](/algorithms/math/binomial.cpp)
@@ -54,6 +57,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [kth digit string](/algorithms/problems/kth-digit-string.cpp)
 
 - Strings
+  - [edit distance](/algorithms/strings/edit-distance.cpp)
   - [manacher](/algorithms/strings/manacher.cpp)
 
 - Trees
