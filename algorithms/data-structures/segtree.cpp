@@ -16,12 +16,14 @@ class SegTree {
 
   T query(ll l, ll r) {
     T la = e, ra = e;
-    l += N; r += N;
+    l += N;
+    r += N;
 
     while (l <= r) {
       if (l & 1) la = op(la, seg[l++]);
       if (~r & 1) ra = op(seg[r--], ra);
-      l >>= 1; r >>= 1;
+      l >>= 1;
+      r >>= 1;
     }
 
     return op(la, ra);
