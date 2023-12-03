@@ -9,6 +9,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [mex](/algorithms/data-structures/mex.cpp)
   - [mex update](/algorithms/data-structures/mex-update.cpp)
   - [segtree](/algorithms/data-structures/segtree.cpp)
+  - [segtree2d](/algorithms/data-structures/segtree2d.cpp)
   - [ufds](/algorithms/data-structures/ufds.cpp)
 
 - Dynamic Programming
@@ -43,6 +44,7 @@ In this repository, you'll find algorithms and data structure implementations fo
 - Math
   - [binomial](/algorithms/math/binomial.cpp)
   - [count divisors](/algorithms/math/count-divisors.cpp)
+  - [count divisors range](/algorithms/math/count-divisors-range.cpp)
   - [factorization](/algorithms/math/factorization.cpp)
   - [factorization with sieve](/algorithms/math/factorization-with-sieve.cpp)
   - [fast exp](/algorithms/math/fast-exp.cpp)
