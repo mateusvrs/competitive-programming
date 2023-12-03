@@ -8,6 +8,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [matrix](/algorithms/data-structures/matrix.cpp)
   - [mex](/algorithms/data-structures/mex.cpp)
   - [mex update](/algorithms/data-structures/mex-update.cpp)
+  - [segtree](/algorithms/data-structures/segtree.cpp)
   - [ufds](/algorithms/data-structures/ufds.cpp)
 
 - Dynamic Programming
