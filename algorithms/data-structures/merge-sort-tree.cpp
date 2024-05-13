@@ -16,7 +16,7 @@ struct MergeSortTree {
         return upper_bound(all(st[i]), b) - lower_bound(all(st[i]), a);
     }
 
-    int in_range(int l, int r, T a, T b) {
+    int inrange(int l, int r, T a, T b) {
         int ans = 0;
 
         for (l += n, r += n + 1; l < r; l >>= 1, r >>= 1) {
