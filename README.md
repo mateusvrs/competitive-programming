@@ -6,6 +6,7 @@ In this repository, you'll find algorithms and data structure implementations fo
 
 - Data Structures
   - [matrix](/algorithms/data-structures/matrix.cpp)
+  - [merge sort tree](/algorithms/data-structures/merge-sort-tree.cpp)
   - [mex](/algorithms/data-structures/mex.cpp)
   - [mex update](/algorithms/data-structures/mex-update.cpp)
   - [segtree](/algorithms/data-structures/segtree.cpp)
@@ -70,6 +71,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [lca binary lifting (cp algo)](/algorithms/trees/lca-binary-lifting-(cp-algo).cpp)
   - [lca segtree (cp algo)](/algorithms/trees/lca-segtree-(cp-algo).cpp)
   - [lca sparse table](/algorithms/trees/lca-sparse-table.cpp)
+  - [tree flatten](/algorithms/trees/tree-flatten.cpp)
   - [tree isomorph](/algorithms/trees/tree_isomorph.cpp)
 
 ## Contributing
