@@ -24,6 +24,7 @@ typedef vector<pll> vll;
 #define fst first
 #define snd second
 #define all(x) x.begin(), x.end()
+#define len(vt) (int)vt.size()
 #define vin(vt) for (auto &e : vt) cin >> e
 #define LSOne(S) ((S) & -(S))
 #define MSOne(S) (1ull << (63 - __builtin_clzll(S)))
