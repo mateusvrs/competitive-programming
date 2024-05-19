@@ -48,6 +48,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [count divisors range](/algorithms/math/count-divisors-range.cpp)
   - [factorization](/algorithms/math/factorization.cpp)
   - [factorization with sieve](/algorithms/math/factorization-with-sieve.cpp)
+  - [fast doubling](/algorithms/math/fast-doubling.cpp)
   - [fast exp](/algorithms/math/fast-exp.cpp)
   - [fast exp iterative](/algorithms/math/fast-exp-iterative.cpp)
   - [gcd](/algorithms/math/gcd.cpp)
