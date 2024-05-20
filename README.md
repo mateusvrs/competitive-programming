@@ -68,6 +68,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [edit distance](/algorithms/strings/edit-distance.cpp)
   - [manacher](/algorithms/strings/manacher.cpp)
   - [rabin karp](/algorithms/strings/rabin-karp.cpp)
+  - [z function](/algorithms/strings/z-function.cpp)
 
 - Trees
   - [lca binary lifting (cp algo)](/algorithms/trees/lca-binary-lifting-(cp-algo).cpp)
