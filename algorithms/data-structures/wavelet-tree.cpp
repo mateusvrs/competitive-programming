@@ -1,9 +1,9 @@
 typedef vector<int>::iterator iter;
 
 class WaveletTree {
-public:
+ public:
   int L, H;
-  WaveletTree* l, * r;
+  WaveletTree *l, *r;
   vector<int> frq;
 
   WaveletTree(iter fr, iter to, int x, int y) {
@@ -36,8 +36,10 @@ public:
 
     int M = L + ((H - L) >> 1);
     int r = frq[i];
-    if (c <= M) return this->l->until(c, r);
-    else return this->r->until(c, i - r);
+    if (c <= M)
+      return this->l->until(c, r);
+    else
+      return this->r->until(c, i - r);
   }
 
   // Count number of occurrences of numbers in the range [a, b]
@@ -51,6 +53,7 @@ public:
     if (L <= a and b <= U) return j - i;
     int M = a + ((b - a) >> 1);
     int ri = frq[i], rj = frq[j];
-    return this->l->range(ri, rj, a, M, L, U) + this->r->range(i - ri, j - rj, M + 1, b, L, U);
+    return this->l->range(ri, rj, a, M, L, U) +
+           this->r->range(i - ri, j - rj, M + 1, b, L, U);
   }
 };
