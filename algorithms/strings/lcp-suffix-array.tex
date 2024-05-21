@@ -1,0 +1,5 @@
+\subsection{LCP with Suffix Array}
+
+For a given string $s$ we want to compute the longest common prefix (LCP) of two arbitrary suffixes with position $i$ and $j$. In fact, let the request be to compute the LCP of the suffixes $p[i]$ and $p[j]$. Then the answer to this query will be $\min(lcp[i], lcp[i+1], \dots, lcp[j-1])$. Thus the problem is reduced to the RMQ.
+
+Time: $O(N)$.
