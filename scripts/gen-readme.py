@@ -106,7 +106,7 @@ To run the project, you need to install the global dependencies, which are:
 
 - Docker Engine v24 (or higher)
 
-From that, you can delete the algorithms inside the `algorithms` folder and add your own inside the same `algorithms` folder that are empty now. To customize the README.md, you can edit the `scripts/gen-readme.py` file. Finally, you can edit the university logo changing the `assets/logo.jpg` file (keeping the same name and extension).
+From that, you can delete the algorithms inside the `algorithms` folder and add your own inside the same `algorithms` folder that are empty now. To customize the README.md, you can edit the `scripts/gen-readme.py` file. Finally, you can edit the university logo changing the `assets/logo.jpg` file (keeping the same name and extension) and uncommenting line 57 at the file "scripts/notebook/template.tex".
 
 Now, you can run the following command:
 
