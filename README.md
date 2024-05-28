@@ -18,6 +18,9 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [kadane](/algorithms/dynamic-programming/kadane.cpp)
   - [lis](/algorithms/dynamic-programming/lis.cpp)
 
+- Extras
+  - [stream int128t](/algorithms/extras/stream-int128t.cpp)
+
 - Geometry
   - [convex hull](/algorithms/geometry/convex-hull.cpp)
   - [point to segment](/algorithms/geometry/point-to-segment.cpp)
