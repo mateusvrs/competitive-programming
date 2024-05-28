@@ -78,7 +78,7 @@ team_name = args.teamname
 
 
 ALGO_FILE_IGNORE = ["debug.cpp"]
-ALGO_SECT_IGNORE = ["extras"]
+ALGO_SECT_IGNORE = []
 CMD_GEN_PDF = "pdflatex -interaction=nonstopmode -halt-on-error "
 END_FLUSHLEFT = "\n\\end{flushleft}"
 END_MULTICOLS = "\n\\end{multicols}\n"
