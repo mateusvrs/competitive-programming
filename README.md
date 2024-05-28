@@ -66,6 +66,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [lcs ks strings](/algorithms/problems/lcs-ks-strings.cpp)
 
 - Strings
+  - [aho corasick](/algorithms/strings/aho-corasick.cpp)
   - [edit distance](/algorithms/strings/edit-distance.cpp)
   - [lcp suffix array](/algorithms/strings/lcp-suffix-array.cpp)
   - [manacher](/algorithms/strings/manacher.cpp)
