@@ -27,6 +27,7 @@ path = Path(args.path)
 clangpath = args.clangpath
 # clangcmd = f"clang-format --style={clangpath} -i "
 clangcmd = f"clang-format --style='file:{clangpath}' -i "
+excluded = ['suffix-tree.cpp']
 
 if __name__ == "__main__":
     for theme in os.listdir(path):
@@ -35,7 +36,7 @@ if __name__ == "__main__":
 
         print(theme)
         for algorithm in os.listdir(path / theme):
-            if not (path / theme / algorithm).__str__().endswith(".cpp"):
+            if not (path / theme / algorithm).__str__().endswith(".cpp") or algorithm in excluded:
                 continue
             print("\t", algorithm)
             algorithm2 = treat(algorithm)
