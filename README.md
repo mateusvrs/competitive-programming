@@ -75,6 +75,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [manacher](/algorithms/strings/manacher.cpp)
   - [rabin karp](/algorithms/strings/rabin-karp.cpp)
   - [suffix array](/algorithms/strings/suffix-array.cpp)
+  - [suffix tree](/algorithms/strings/suffix-tree.cpp)
   - [z function](/algorithms/strings/z-function.cpp)
 
 - Trees
