@@ -55,6 +55,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [fast doubling](/algorithms/math/fast-doubling.cpp)
   - [fast exp](/algorithms/math/fast-exp.cpp)
   - [fast exp iterative](/algorithms/math/fast-exp-iterative.cpp)
+  - [fft](/algorithms/math/fft.cpp)
   - [gcd](/algorithms/math/gcd.cpp)
   - [integer mod](/algorithms/math/integer-mod.cpp)
   - [is prime](/algorithms/math/is-prime.cpp)
