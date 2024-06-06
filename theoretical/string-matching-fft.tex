@@ -1,0 +1,31 @@
+\subsection{String Matching with FFT}
+
+We are given two strings, a text $T$ and a pattern $P$, consisting of lowercase letters. We have to compute all the occurrences of the pattern in the text.
+
+We create a polynomial for each string ($T[i]$ and $P[i]$ are numbers between $0$ and $25$ corresponding to the $26$ letters of the alphabet):
+
+\[A(x) = a_0 x^0 + a_1 x^1 + \dots + a_{n-1} x^{n-1}, \quad n = |T|\]
+
+with
+
+\[a_i = \cos(\alpha_i) + i \sin(\alpha_i), \quad \alpha_i = \frac{2 \pi T[i]}{26}\]
+
+And
+
+\[B(x) = b_0 x^0 + b_1 x^1 + \dots + b_{m-1} x^{m-1}, \quad m = |P|\]
+
+with
+
+\[b_i = \cos(\beta_i) - i \sin(\beta_i), \quad \beta_i = \frac{2 \pi P[m-i-1]}{26}\]
+
+Notice that with the expression $P[m-i-1]$ explicitly reverses the pattern.
+
+The $(m-1+i)$th coefficients of the product of the two polynomials $C(x) = A(x) \cdot B(x)$ will tell us, if the pattern appears in the text at position $i$.
+
+If there isn't a match, then at least a character is different, which leads that one of the products $a_{i+1} \cdot b_{m-1-j}$ is not equal to $1$, which leads to the coefficient $c_{m-1+i} \ne m$.
+
+\subsubsection{Wildcards}
+
+This is an extension of the previous problem. This time we allow that the pattern contains the wildcard character $*$, which can match every possible letter.
+
+We create the exact same polynomials, except that we set $b_i = 0$ if $P[m-i-1] = *$. If $x$ is the number of wildcards in $P$, then we will have a match of $P$ in $T$ at index $i$ if $c_{m-1+i} = m - x$.
