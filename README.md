@@ -9,6 +9,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [merge sort tree](/algorithms/data-structures/merge-sort-tree.cpp)
   - [mex](/algorithms/data-structures/mex.cpp)
   - [mex update](/algorithms/data-structures/mex-update.cpp)
+  - [rmq](/algorithms/data-structures/rmq.cpp)
   - [segtree](/algorithms/data-structures/segtree.cpp)
   - [segtree2d](/algorithms/data-structures/segtree2d.cpp)
   - [segtreelazy](/algorithms/data-structures/segtreelazy.cpp)
