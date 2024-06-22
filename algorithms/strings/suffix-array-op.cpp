@@ -3,6 +3,7 @@ struct suffix_array {
   string s;
   int n;
   vector<int> sa, cnt, rnk, lcp;
+  rmq<int> RMQ; // /data-structures/rmq.cpp
 
   bool cmp(int a1, int b1, int a2, int b2, int a3 = 0, int b3 = 0) {
     return a1 != b1 ? a1 < b1 : (a2 != b2 ? a2 < b2 : a3 < b3);
@@ -86,5 +87,12 @@ struct suffix_array {
       while (i + k < n and j + k < n and s[i + k] == s[j + k]) k++;
       lcp[rnk[i]] = k;
     }
+    RMQ = rmq<int>(lcp);
   }
+
+  int query(int i, int j) {
+		if (i == j) return n-i;
+		i = rnk[i], j = rnk[j];
+		return RMQ.query(min(i, j), max(i, j)-1);
+	}
 };
