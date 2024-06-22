@@ -11,6 +11,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [mex update](/algorithms/data-structures/mex-update.cpp)
   - [segtree](/algorithms/data-structures/segtree.cpp)
   - [segtree2d](/algorithms/data-structures/segtree2d.cpp)
+  - [segtreelazy](/algorithms/data-structures/segtreelazy.cpp)
   - [ufds](/algorithms/data-structures/ufds.cpp)
   - [wavelet tree](/algorithms/data-structures/wavelet-tree.cpp)
 
