@@ -26,6 +26,7 @@ In this repository, you'll find algorithms and data structure implementations fo
 - Geometry
   - [convex hull](/algorithms/geometry/convex-hull.cpp)
   - [point to segment](/algorithms/geometry/point-to-segment.cpp)
+  - [polyominoes](/algorithms/geometry/polyominoes.cpp)
 
 - Graphs
   - [articulation points](/algorithms/graphs/articulation-points.cpp)
