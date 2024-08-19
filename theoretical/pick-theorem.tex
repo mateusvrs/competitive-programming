@@ -1,0 +1,16 @@
+\subsection{Pick's Theorem}
+
+Pick's Theorem expresses the area of a polygon, all whose vertices are lattice (integers) points in a coordinate plane, in terms of the number of lattice points inside the polygon and the number of lattice points on the sides (boundaries) of the polygon.
+
+\[A = I + \frac{B}{2} - 1\]
+
+\begin{itemize}
+    \item A: area of the polygon
+    \item I: points inside the polygon
+    \item B: points on the sides (boundaries)
+\end{itemize}
+
+It is possible to easily calculate the number of points on the sides of a side AB.
+
+Consider \(x = (x_1 - x_2)\) and \(y = (y_1 - y_2)\).
+If \(x = 0\) or \(y = 0\), the answer is 1D and trivial (i.e. \(x + 1\) or \(y + 1\)). Otherwise, the answer is \(gcd(a, b) + 1\).
