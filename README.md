@@ -32,6 +32,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [articulation points](/algorithms/graphs/articulation-points.cpp)
   - [bellman ford](/algorithms/graphs/bellman-ford.cpp)
   - [bfs 01](/algorithms/graphs/bfs-01.cpp)
+  - [binary lifting](/algorithms/graphs/binary-lifting.cpp)
   - [bridges](/algorithms/graphs/bridges.cpp)
   - [cycle bellman ford](/algorithms/graphs/cycle-bellman-ford.cpp)
   - [cycle floyd warshall](/algorithms/graphs/cycle-floyd-warshall.cpp)
