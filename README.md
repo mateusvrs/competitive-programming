@@ -40,6 +40,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [floyd warshall](/algorithms/graphs/floyd-warshall.cpp)
   - [graph](/algorithms/graphs/graph.cpp)
   - [kahn](/algorithms/graphs/kahn.cpp)
+  - [kosaraju](/algorithms/graphs/kosaraju.cpp)
   - [kruskal](/algorithms/graphs/kruskal.cpp)
   - [minimax](/algorithms/graphs/minimax.cpp)
   - [msf](/algorithms/graphs/msf.cpp)
