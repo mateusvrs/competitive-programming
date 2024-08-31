@@ -13,6 +13,7 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [segtree](/algorithms/data-structures/segtree.cpp)
   - [segtree2d](/algorithms/data-structures/segtree2d.cpp)
   - [segtreelazy](/algorithms/data-structures/segtreelazy.cpp)
+  - [segtreelazy generic](/algorithms/data-structures/segtreelazy_generic.cpp)
   - [ufds](/algorithms/data-structures/ufds.cpp)
   - [wavelet tree](/algorithms/data-structures/wavelet-tree.cpp)
 
