@@ -25,9 +25,17 @@ In this repository, you'll find algorithms and data structure implementations fo
   - [stream int128t](/algorithms/extras/stream-int128t.cpp)
 
 - Geometry
+  - [circle](/algorithms/geometry/circle.cpp)
   - [convex hull](/algorithms/geometry/convex-hull.cpp)
+  - [convex hull trick](/algorithms/geometry/convex-hull-trick.cpp)
+  - [lichao tree](/algorithms/geometry/lichao-tree.cpp)
+  - [point in polygon](/algorithms/geometry/point-in-polygon.cpp)
   - [point to segment](/algorithms/geometry/point-to-segment.cpp)
+  - [point vector](/algorithms/geometry/point-vector.cpp)
+  - [polygon](/algorithms/geometry/polygon.cpp)
   - [polyominoes](/algorithms/geometry/polyominoes.cpp)
+  - [sweep line](/algorithms/geometry/sweep-line.cpp)
+  - [triangulo](/algorithms/geometry/triangulo.cpp)
 
 - Graphs
   - [articulation points](/algorithms/graphs/articulation-points.cpp)
