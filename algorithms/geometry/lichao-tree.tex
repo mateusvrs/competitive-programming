@@ -1,0 +1,9 @@
+\subsection{Convex Hull Trick}
+
+Add lines $ax + b$ and query maximum value at $x$.
+If you want to get minimum value, set \texttt{inf = numeric\_limits<T>::max()}.
+In case of overflow, try to compress $x$ values.
+
+
+Time: $O(\log (\text{HI}-\text{LO}))$ for query, $O(\log (\text{HI}-\text{LO}))$ for add, $O(\log^2 (\text{HI}-\text{LO}))$ for add segment.
+
