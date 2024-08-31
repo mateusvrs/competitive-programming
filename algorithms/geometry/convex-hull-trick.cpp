@@ -1,4 +1,5 @@
-template <typename T = ll> struct ConvexHullTrick {
+template <typename T = ll>
+struct ConvexHullTrick {
   static constexpr T inf = numeric_limits<T>::max();
 
   struct Line {
@@ -20,12 +21,16 @@ template <typename T = ll> struct ConvexHullTrick {
     auto it = ln.insert({a, b, 0});
     while (overlap(it)) ln.erase(next(it)), update(it);
     if (it != ln.begin() and !overlap(prev(it))) it = prev(it), update(it);
-    while (it != ln.begin() and overlap(prev(it))) it = prev(it), ln.erase(next(it)), update(it);
+    while (it != ln.begin() and overlap(prev(it)))
+      it = prev(it), ln.erase(next(it)), update(it);
   }
-private:
+
+ private:
   void update(auto it) const {
-    if (next(it) == ln.end()) it->x_inter = inf;
-    else if (it->a == next(it)->a) (it->x_inter = it->b >= next(it)->b ? inf : -inf);
+    if (next(it) == ln.end())
+      it->x_inter = inf;
+    else if (it->a == next(it)->a)
+      (it->x_inter = it->b >= next(it)->b ? inf : -inf);
     else {
       auto h = (it->b - next(it)->b);
       auto l = (next(it)->a - it->a);
